@@ -1,0 +1,35 @@
+<%= form_with(model: @inquirie, local: true) do |form| %>
+
+<% if @inquirie.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= @inquirie.errors.count %>件のエラーがあります。</h2>
+      <ul>
+      <% @inquirie.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+  <div class="container">
+  <div class="form-group">
+    <%= form.label :name %>
+    <%= form.text_field :name, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :content %>
+    <%= form.text_field :content, class: "form-control" %>
+  </div>
+  <div class="form-group">
+    <%= form.label :email %>
+    <%= form.text_field :email, class: "form-control"%>
+  </div>
+  <div class="form-group">
+    <%= form.label :phone_number %>
+    <%= form.text_field :phone_number, class: "form-control"%>
+  </div>
+  <div class="actions">
+ <button type="submit", class="btn btn-primary btn-lg btn-block"> </button>
+</div>
+<% end %>
+</div>
+
