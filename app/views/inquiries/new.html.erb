@@ -1,10 +1,10 @@
-<%= form_with(model: @inquiriy, local: true) do |form| %>
+<%= form_with(model: @inquiry, local: true) do |form| %>
 
-<% if @inquiriy.errors.any? %>
+<% if @inquiry.errors.any? %>
     <div id="error_explanation">
-      <h2><%= @inquiriy.errors.count %>件のエラーがあります。</h2>
+      <h2><%= @inquiry.errors.count %>件のエラーがあります。</h2>
       <ul>
-      <% @inquiriy.errors.full_messages.each do |msg| %>
+      <% @inquiry.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
@@ -27,7 +27,7 @@
     <%= form.label :phone_number %>
     <%= form.text_field :phone_number, class: "form-control"%>
   </div>
-  <%= form.hidden_field :support_id, value:@support  %>
+  <%#= form.hidden_field :support_id, value:@support  %>
   <div class="actions">
  <button type="submit", class="btn btn-primary btn-lg btn-block"> </button>
 </div>
