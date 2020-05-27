@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
 resources :sessions, only: [:new, :create, :destroy]
 
-resources :supports 
+resources :supports
 
 resources :inquiries, only:  [:new, :create]
 
